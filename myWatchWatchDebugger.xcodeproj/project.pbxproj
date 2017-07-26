@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		425073F91F23939C005104AC /* myWatchWatchDebuggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425073F81F23939C005104AC /* myWatchWatchDebuggerTests.swift */; };
+		4250740D1F2397EC005104AC /* WatchDebugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250740C1F2397EC005104AC /* WatchDebugger.swift */; };
+		425074111F23980A005104AC /* WDCommandDebuggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425074101F23980A005104AC /* WDCommandDebuggerViewController.swift */; };
+		425074131F239816005104AC /* WatchDebugger.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425074121F239816005104AC /* WatchDebugger.xcassets */; };
+		4250741E1F239E3C005104AC /* WDWatchChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250741D1F239E3C005104AC /* WDWatchChooserViewController.swift */; };
+		425074201F23A484005104AC /* WDDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250741F1F23A484005104AC /* WDDevice.swift */; };
+		425074251F23A498005104AC /* WDBCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425074231F23A498005104AC /* WDBCommunicator.swift */; };
+		425074261F23A498005104AC /* WDBCommunicatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425074241F23A498005104AC /* WDBCommunicatorDelegate.swift */; };
+		425074291F23A50A005104AC /* WDUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425074281F23A50A005104AC /* WDUtil.swift */; };
+		4250742C1F23A678005104AC /* WDLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4250742B1F23A678005104AC /* WDLog.swift */; };
+		425074311F23A785005104AC /* WDDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425074301F23A785005104AC /* WDDefaults.swift */; };
+		42AFA4C91F27D319002DEED3 /* WatchDebugger.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425074191F23984A005104AC /* WatchDebugger.storyboard */; };
+		42AFA4CA1F27D328002DEED3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 425074181F239833005104AC /* Info.plist */; };
+		42EFC91E1F274D5100E14967 /* WDIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFC91D1F274D5100E14967 /* WDIdentifiers.swift */; };
+		42FF05A41F240BE500296041 /* WDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF05A31F240BE500296041 /* WDImageView.swift */; };
+		42FF05A61F240CD700296041 /* WDExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FF05A51F240CD700296041 /* WDExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		425073F51F23939C005104AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 425073DB1F23939C005104AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 425073E21F23939C005104AC;
+			remoteInfo = myWatchWatchDebugger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		425073E31F23939C005104AC /* WatchDebugger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDebugger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		425073F41F23939C005104AC /* myWatchWatchDebuggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myWatchWatchDebuggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		425073F81F23939C005104AC /* myWatchWatchDebuggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWatchWatchDebuggerTests.swift; sourceTree = "<group>"; };
+		425073FA1F23939C005104AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4250740C1F2397EC005104AC /* WatchDebugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchDebugger.swift; path = Source/Core/WatchDebugger.swift; sourceTree = "<group>"; };
+		425074101F23980A005104AC /* WDCommandDebuggerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDCommandDebuggerViewController.swift; path = Source/UI/Controllers/WDCommandDebuggerViewController.swift; sourceTree = "<group>"; };
+		425074121F239816005104AC /* WatchDebugger.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = WatchDebugger.xcassets; path = Resource/WatchDebugger.xcassets; sourceTree = "<group>"; };
+		425074171F239833005104AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		4250741A1F23984A005104AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Localization/Base.lproj/WatchDebugger.storyboard; sourceTree = "<group>"; };
+		4250741D1F239E3C005104AC /* WDWatchChooserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDWatchChooserViewController.swift; path = Source/UI/Controllers/WDWatchChooserViewController.swift; sourceTree = "<group>"; };
+		4250741F1F23A484005104AC /* WDDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDDevice.swift; path = Source/Core/Device/WDDevice.swift; sourceTree = "<group>"; };
+		425074231F23A498005104AC /* WDBCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDBCommunicator.swift; path = Source/Core/Bluetooth/WDBCommunicator.swift; sourceTree = "<group>"; };
+		425074241F23A498005104AC /* WDBCommunicatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDBCommunicatorDelegate.swift; path = Source/Core/Bluetooth/WDBCommunicatorDelegate.swift; sourceTree = "<group>"; };
+		425074281F23A50A005104AC /* WDUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDUtil.swift; path = Source/Core/Util/WDUtil.swift; sourceTree = "<group>"; };
+		4250742B1F23A678005104AC /* WDLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDLog.swift; path = Source/Core/Log/WDLog.swift; sourceTree = "<group>"; };
+		425074301F23A785005104AC /* WDDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDDefaults.swift; path = Source/Core/Constants/WDDefaults.swift; sourceTree = "<group>"; };
+		42EFC91D1F274D5100E14967 /* WDIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDIdentifiers.swift; path = Source/Core/Constants/WDIdentifiers.swift; sourceTree = "<group>"; };
+		42FF05A31F240BE500296041 /* WDImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDImageView.swift; path = Source/UI/Core/WDImageView.swift; sourceTree = "<group>"; };
+		42FF05A51F240CD700296041 /* WDExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WDExtensions.swift; path = Source/Core/Util/WDExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		425073E01F23939C005104AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		425073F11F23939C005104AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		425073DA1F23939C005104AC = {
+			isa = PBXGroup;
+			children = (
+				425073E51F23939C005104AC /* myWatchWatchDebugger */,
+				425073F71F23939C005104AC /* myWatchWatchDebuggerTests */,
+				425073E41F23939C005104AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		425073E41F23939C005104AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				425073E31F23939C005104AC /* WatchDebugger.app */,
+				425073F41F23939C005104AC /* myWatchWatchDebuggerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		425073E51F23939C005104AC /* myWatchWatchDebugger */ = {
+			isa = PBXGroup;
+			children = (
+				425074091F23967D005104AC /* Source */,
+				4250740A1F239681005104AC /* Resource */,
+				4250740B1F23969E005104AC /* Localization */,
+			);
+			path = myWatchWatchDebugger;
+			sourceTree = "<group>";
+		};
+		425073F71F23939C005104AC /* myWatchWatchDebuggerTests */ = {
+			isa = PBXGroup;
+			children = (
+				425073F81F23939C005104AC /* myWatchWatchDebuggerTests.swift */,
+				425073FA1F23939C005104AC /* Info.plist */,
+			);
+			path = myWatchWatchDebuggerTests;
+			sourceTree = "<group>";
+		};
+		425074031F239624005104AC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4250742A1F23A57C005104AC /* Log */,
+				425074071F239641005104AC /* Device */,
+				425074081F239646005104AC /* Bluetooth */,
+				4250742D1F23A71C005104AC /* Constants */,
+				425074271F23A4E8005104AC /* Utilities */,
+				4250740C1F2397EC005104AC /* WatchDebugger.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		425074041F239629005104AC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				42FF05A01F240B8100296041 /* Core */,
+				425074051F239631005104AC /* Controllers */,
+				425074061F239636005104AC /* Storyboards */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		425074051F239631005104AC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4250741D1F239E3C005104AC /* WDWatchChooserViewController.swift */,
+				425074101F23980A005104AC /* WDCommandDebuggerViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		425074061F239636005104AC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				425074191F23984A005104AC /* WatchDebugger.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		425074071F239641005104AC /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				4250741F1F23A484005104AC /* WDDevice.swift */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		425074081F239646005104AC /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				425074231F23A498005104AC /* WDBCommunicator.swift */,
+				425074241F23A498005104AC /* WDBCommunicatorDelegate.swift */,
+			);
+			name = Bluetooth;
+			sourceTree = "<group>";
+		};
+		425074091F23967D005104AC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				425074031F239624005104AC /* Core */,
+				425074041F239629005104AC /* UI */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		4250740A1F239681005104AC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				425074121F239816005104AC /* WatchDebugger.xcassets */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		4250740B1F23969E005104AC /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				425074181F239833005104AC /* Info.plist */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		425074271F23A4E8005104AC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				425074281F23A50A005104AC /* WDUtil.swift */,
+				42FF05A51F240CD700296041 /* WDExtensions.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4250742A1F23A57C005104AC /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				4250742B1F23A678005104AC /* WDLog.swift */,
+			);
+			name = Log;
+			sourceTree = "<group>";
+		};
+		4250742D1F23A71C005104AC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				425074301F23A785005104AC /* WDDefaults.swift */,
+				42EFC91D1F274D5100E14967 /* WDIdentifiers.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		42FF05A01F240B8100296041 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				42FF05A31F240BE500296041 /* WDImageView.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		425073E21F23939C005104AC /* myWatchWatchDebugger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 425073FD1F23939C005104AC /* Build configuration list for PBXNativeTarget "myWatchWatchDebugger" */;
+			buildPhases = (
+				425073DF1F23939C005104AC /* Sources */,
+				425073E01F23939C005104AC /* Frameworks */,
+				425073E11F23939C005104AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = myWatchWatchDebugger;
+			productName = myWatchWatchDebugger;
+			productReference = 425073E31F23939C005104AC /* WatchDebugger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		425073F31F23939C005104AC /* myWatchWatchDebuggerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 425074001F23939C005104AC /* Build configuration list for PBXNativeTarget "myWatchWatchDebuggerTests" */;
+			buildPhases = (
+				425073F01F23939C005104AC /* Sources */,
+				425073F11F23939C005104AC /* Frameworks */,
+				425073F21F23939C005104AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				425073F61F23939C005104AC /* PBXTargetDependency */,
+			);
+			name = myWatchWatchDebuggerTests;
+			productName = myWatchWatchDebuggerTests;
+			productReference = 425073F41F23939C005104AC /* myWatchWatchDebuggerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		425073DB1F23939C005104AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WD;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = theMatys;
+				TargetAttributes = {
+					425073E21F23939C005104AC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = E3353XP4LG;
+						ProvisioningStyle = Automatic;
+					};
+					425073F31F23939C005104AC = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = E3353XP4LG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 425073E21F23939C005104AC;
+					};
+				};
+			};
+			buildConfigurationList = 425073DE1F23939C005104AC /* Build configuration list for PBXProject "myWatchWatchDebugger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 425073DA1F23939C005104AC;
+			productRefGroup = 425073E41F23939C005104AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				425073E21F23939C005104AC /* myWatchWatchDebugger */,
+				425073F31F23939C005104AC /* myWatchWatchDebuggerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		425073E11F23939C005104AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42AFA4CA1F27D328002DEED3 /* Info.plist in Resources */,
+				42AFA4C91F27D319002DEED3 /* WatchDebugger.storyboard in Resources */,
+				425074131F239816005104AC /* WatchDebugger.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		425073F21F23939C005104AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		425073DF1F23939C005104AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425074111F23980A005104AC /* WDCommandDebuggerViewController.swift in Sources */,
+				425074201F23A484005104AC /* WDDevice.swift in Sources */,
+				425074311F23A785005104AC /* WDDefaults.swift in Sources */,
+				42EFC91E1F274D5100E14967 /* WDIdentifiers.swift in Sources */,
+				425074261F23A498005104AC /* WDBCommunicatorDelegate.swift in Sources */,
+				4250740D1F2397EC005104AC /* WatchDebugger.swift in Sources */,
+				4250742C1F23A678005104AC /* WDLog.swift in Sources */,
+				425074291F23A50A005104AC /* WDUtil.swift in Sources */,
+				42FF05A41F240BE500296041 /* WDImageView.swift in Sources */,
+				4250741E1F239E3C005104AC /* WDWatchChooserViewController.swift in Sources */,
+				42FF05A61F240CD700296041 /* WDExtensions.swift in Sources */,
+				425074251F23A498005104AC /* WDBCommunicator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		425073F01F23939C005104AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425073F91F23939C005104AC /* myWatchWatchDebuggerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		425073F61F23939C005104AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 425073E21F23939C005104AC /* myWatchWatchDebugger */;
+			targetProxy = 425073F51F23939C005104AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		425074181F239833005104AC /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				425074171F239833005104AC /* Base */,
+			);
+			name = Info.plist;
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		425074191F23984A005104AC /* WatchDebugger.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4250741A1F23984A005104AC /* Base */,
+			);
+			name = WatchDebugger.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		425073FB1F23939C005104AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		425073FC1F23939C005104AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		425073FE1F23939C005104AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E3353XP4LG;
+				INFOPLIST_FILE = "$(SRCROOT)/myWatchWatchDebugger/Localization/Base.lproj/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theMatys.myWatchWatchDebugger;
+				PRODUCT_NAME = WatchDebugger;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		425073FF1F23939C005104AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E3353XP4LG;
+				INFOPLIST_FILE = "$(SRCROOT)/myWatchWatchDebugger/Localization/Base.lproj/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theMatys.myWatchWatchDebugger;
+				PRODUCT_NAME = WatchDebugger;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		425074011F23939C005104AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E3353XP4LG;
+				INFOPLIST_FILE = myWatchWatchDebuggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theMatys.myWatchWatchDebuggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myWatchWatchDebugger.app/Contents/MacOS/myWatchWatchDebugger";
+			};
+			name = Debug;
+		};
+		425074021F23939C005104AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E3353XP4LG;
+				INFOPLIST_FILE = myWatchWatchDebuggerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.theMatys.myWatchWatchDebuggerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myWatchWatchDebugger.app/Contents/MacOS/myWatchWatchDebugger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		425073DE1F23939C005104AC /* Build configuration list for PBXProject "myWatchWatchDebugger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425073FB1F23939C005104AC /* Debug */,
+				425073FC1F23939C005104AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425073FD1F23939C005104AC /* Build configuration list for PBXNativeTarget "myWatchWatchDebugger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425073FE1F23939C005104AC /* Debug */,
+				425073FF1F23939C005104AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		425074001F23939C005104AC /* Build configuration list for PBXNativeTarget "myWatchWatchDebuggerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				425074011F23939C005104AC /* Debug */,
+				425074021F23939C005104AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 425073DB1F23939C005104AC /* Project object */;
+}

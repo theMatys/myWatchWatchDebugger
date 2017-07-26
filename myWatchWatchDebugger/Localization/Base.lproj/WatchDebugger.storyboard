@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="WatchDebugger" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="WatchDebugger" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About WatchDebugger" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide WatchDebugger" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit WatchDebugger" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="WDApplicationDelegate" customModule="WatchDebugger" customModuleProvider="target"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController storyboardIdentifier="WDWCWatchDebugger" id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Watch Debugger" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Watch Chooser-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController title="Watch Chooser" storyboardIdentifier="WDVCWatchChooser" id="XfG-lQ-9wD" customClass="WDWatchChooserViewController" customModule="WatchDebugger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-If-8HC">
+                                <rect key="frame" x="18" y="220" width="444" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="myWatch Watch Debugger" id="1fo-4D-iqv">
+                                    <font key="font" metaFont="systemLight" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39c-3B-5GI">
+                                <rect key="frame" x="18" y="185" width="444" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Select a myWatch device from the list below..." id="9rf-1i-OvE">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NiK-L4-CRs" customClass="WDWatchChooserStackView" customModule="WatchDebugger" customModuleProvider="target">
+                                <rect key="frame" x="20" y="169" width="440" height="0.0"/>
+                            </stackView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1b-hg-I7E">
+                                <rect key="frame" x="18" y="20" width="444" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Bluetooth: OFF" id="H5j-pC-ggK">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="M1b-hg-I7E" secondAttribute="bottom" constant="20" id="39q-ZR-t6A"/>
+                            <constraint firstItem="uOn-If-8HC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="8om-YQ-1qF"/>
+                            <constraint firstItem="39c-3B-5GI" firstAttribute="top" secondItem="uOn-If-8HC" secondAttribute="bottom" constant="16" id="HlE-OA-MFt"/>
+                            <constraint firstItem="39c-3B-5GI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Hsq-TL-Z50"/>
+                            <constraint firstItem="M1b-hg-I7E" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="InN-ue-dd4"/>
+                            <constraint firstItem="uOn-If-8HC" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="O9L-th-Tpr"/>
+                            <constraint firstAttribute="trailing" secondItem="NiK-L4-CRs" secondAttribute="trailing" constant="20" id="OVA-Nj-Abc"/>
+                            <constraint firstItem="NiK-L4-CRs" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="SES-Pm-XJ9"/>
+                            <constraint firstItem="NiK-L4-CRs" firstAttribute="top" secondItem="39c-3B-5GI" secondAttribute="bottom" constant="16" id="UQO-Cq-BYu"/>
+                            <constraint firstAttribute="trailing" secondItem="M1b-hg-I7E" secondAttribute="trailing" constant="20" id="WQC-lM-Xxh"/>
+                            <constraint firstAttribute="trailing" secondItem="uOn-If-8HC" secondAttribute="trailing" constant="20" id="ZAJ-nx-57Y"/>
+                            <constraint firstAttribute="trailing" secondItem="39c-3B-5GI" secondAttribute="trailing" constant="20" id="p7G-JQ-9lm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelBluetoothIndicator" destination="M1b-hg-I7E" id="oqI-jg-O4U"/>
+                        <outlet property="labelDescription" destination="39c-3B-5GI" id="YnX-xn-YA4"/>
+                        <outlet property="labelTitle" destination="uOn-If-8HC" id="8e4-mT-cb9"/>
+                        <outlet property="stackViewWatchChooser" destination="NiK-L4-CRs" id="ujz-pn-rH3"/>
+                        <segue destination="MWU-PG-tby" kind="show" identifier="WDAssetWatchChooserToCommandDebugger" id="fkw-y5-Xt7"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="656"/>
+        </scene>
+        <!--Command Debugger-->
+        <scene sceneID="tIk-8b-9nv">
+            <objects>
+                <viewController title="Command Debugger" storyboardIdentifier="WDVCCommandDebugger" id="MWU-PG-tby" customClass="WDCommandDebuggerViewController" customModule="WatchDebugger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="cH5-bC-BtN">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgn-uU-FGa">
+                                <rect key="frame" x="18" y="220" width="444" height="30"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Connected device: " id="TFT-d6-XUB">
+                                    <font key="font" metaFont="systemLight" size="25"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm8-B4-eAY">
+                                <rect key="frame" x="18" y="185" width="444" height="19"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Enter a command to send..." id="ebD-k5-TDU">
+                                    <font key="font" metaFont="system" size="15"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roc-Kd-XzI">
+                                <rect key="frame" x="20" y="147" width="373" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pt1-Gy-MDy"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" bezelStyle="round" id="GZN-mw-Tb9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JhY-5k-CEs">
+                                <rect key="frame" x="395" y="145" width="71" height="32"/>
+                                <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="g5F-aK-ERw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <box borderType="line" title="Response log" translatesAutoresizingMaskIntoConstraints="NO" id="WL4-9J-gWV">
+                                <rect key="frame" x="17" y="16" width="446" height="115"/>
+                                <view key="contentView" id="QjS-EV-KO7">
+                                    <rect key="frame" x="1" y="1" width="444" height="96"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <scrollView wantsLayer="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7p-pJ-bfd">
+                                            <rect key="frame" x="0.0" y="0.0" width="444" height="96"/>
+                                            <clipView key="contentView" id="naJ-0x-W0J">
+                                                <rect key="frame" x="1" y="1" width="427" height="94"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textView editable="NO" selectable="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="G3m-Dz-wwY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="427" height="94"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <size key="minSize" width="427" height="94"/>
+                                                        <size key="maxSize" width="463" height="10000000"/>
+                                                        <attributedString key="textStorage">
+                                                            <fragment content="--------------------- RESPONSE LOG BEGIN ">
+                                                                <attributes>
+                                                                    <font key="NSFont" metaFont="system"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="-------------------------">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="13" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="5" headIndent="5" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                    </textView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="a5v-j6-Rxm">
+                                                <rect key="frame" x="-100" y="-100" width="442" height="15"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="8gL-Bk-qYP">
+                                                <rect key="frame" x="428" y="1" width="15" height="94"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="L7p-pJ-bfd" firstAttribute="top" secondItem="QjS-EV-KO7" secondAttribute="top" id="FGi-9d-dHj"/>
+                                        <constraint firstItem="L7p-pJ-bfd" firstAttribute="leading" secondItem="QjS-EV-KO7" secondAttribute="leading" id="hWM-dM-ZtQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="L7p-pJ-bfd" secondAttribute="bottom" id="paf-pS-ZTh"/>
+                                        <constraint firstAttribute="trailing" secondItem="L7p-pJ-bfd" secondAttribute="trailing" id="tph-0m-teQ"/>
+                                    </constraints>
+                                </view>
+                                <font key="titleFont" size="13" name=".AppleSystemUIFont"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qm8-B4-eAY" firstAttribute="top" secondItem="dgn-uU-FGa" secondAttribute="bottom" constant="16" id="0of-7r-gk3"/>
+                            <constraint firstItem="qm8-B4-eAY" firstAttribute="leading" secondItem="cH5-bC-BtN" secondAttribute="leading" constant="20" id="237-NT-CSK"/>
+                            <constraint firstItem="dgn-uU-FGa" firstAttribute="top" secondItem="cH5-bC-BtN" secondAttribute="top" constant="20" id="9P1-QN-WHu"/>
+                            <constraint firstItem="roc-Kd-XzI" firstAttribute="leading" secondItem="cH5-bC-BtN" secondAttribute="leading" constant="20" id="B8o-it-PbP"/>
+                            <constraint firstItem="WL4-9J-gWV" firstAttribute="top" secondItem="roc-Kd-XzI" secondAttribute="bottom" constant="16" id="FGw-eB-B5f"/>
+                            <constraint firstAttribute="trailing" secondItem="dgn-uU-FGa" secondAttribute="trailing" constant="20" id="LY6-1Z-jEF"/>
+                            <constraint firstItem="dgn-uU-FGa" firstAttribute="leading" secondItem="cH5-bC-BtN" secondAttribute="leading" constant="20" id="QkP-7B-I4m"/>
+                            <constraint firstItem="JhY-5k-CEs" firstAttribute="leading" secondItem="roc-Kd-XzI" secondAttribute="trailing" constant="8" id="Ul0-7X-Ubg"/>
+                            <constraint firstItem="roc-Kd-XzI" firstAttribute="top" secondItem="qm8-B4-eAY" secondAttribute="bottom" constant="8" id="YdD-EI-bL9"/>
+                            <constraint firstAttribute="trailing" secondItem="JhY-5k-CEs" secondAttribute="trailing" constant="20" id="jLn-Wy-R7l"/>
+                            <constraint firstItem="JhY-5k-CEs" firstAttribute="centerY" secondItem="roc-Kd-XzI" secondAttribute="centerY" id="jgv-XT-p3f"/>
+                            <constraint firstAttribute="bottom" secondItem="WL4-9J-gWV" secondAttribute="bottom" constant="20" id="nA2-6q-pZG"/>
+                            <constraint firstItem="WL4-9J-gWV" firstAttribute="leading" secondItem="cH5-bC-BtN" secondAttribute="leading" constant="20" id="ovq-VD-xzl"/>
+                            <constraint firstAttribute="trailing" secondItem="qm8-B4-eAY" secondAttribute="trailing" constant="20" id="t4p-62-Pi2"/>
+                            <constraint firstAttribute="trailing" secondItem="WL4-9J-gWV" secondAttribute="trailing" constant="20" id="vaI-wN-1ev"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonSend" destination="JhY-5k-CEs" id="jVj-75-mYY"/>
+                        <outlet property="labelDescription" destination="qm8-B4-eAY" id="GPt-FJ-HML"/>
+                        <outlet property="labelTitle" destination="dgn-uU-FGa" id="fXv-3d-zyl"/>
+                        <outlet property="textFieldCommand" destination="roc-Kd-XzI" id="Ros-GS-5ID"/>
+                        <outlet property="textViewResponseLog" destination="G3m-Dz-wwY" id="nKG-J0-NRl"/>
+                    </connections>
+                </viewController>
+                <customObject id="6nB-ii-GhS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="656"/>
+        </scene>
+    </scenes>
+</document>
